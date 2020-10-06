@@ -46,7 +46,7 @@ class OutputAria2:
             userpass = '%s:%s@' % (username, password)
         else:
             userpass = ''
-        url = 'http://%s%s:%s/rpc' % (userpass, server, port)
+        url = 'ws://%s%s:%s/jsonrpc' % (userpass, server, port)
         logger.debug('aria2 url: {}', url)
         logger.info('Connecting to daemon at {}', url)
         try:
